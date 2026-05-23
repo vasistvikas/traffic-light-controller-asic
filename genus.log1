@@ -1,0 +1,74 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[15:07:05.095633] Configured Lic search path (21.01-s002): 5280@cadence
+
+Version: 21.14-s082_1, built Thu Jun 23 02:02:08 PDT 2022
+Options: 
+Date:    Sat Mar 28 15:07:05 2026
+Host:    cad13 (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (16cores*24cpus*1physical cpu*13th Gen Intel(R) Core(TM) i7-13700 30720KB) (15886420KB)
+PID:     55997
+OS:      Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+
+[15:07:05.205136] Periodic Lic check successful
+[15:07:05.205144] Feature usage summary:
+[15:07:05.205144] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (3 seconds elapsed).
+
+WARNING: This version of the tool is 1374 days old.
+@genus:root: 1> set_db init_lib_search_path /home/install/FOUNDRY/digital/90nm/dig/lib
+  Setting attribute of root '/': 'init_lib_search_path' = /home/install/FOUNDRY/digital/90nm/dig/lib
+1 /home/install/FOUNDRY/digital/90nm/dig/lib
+@genus:root: 2> set_db init_lib_search_path /home/install/FOUNDRY/digital/90nm/dig/lib
+  Setting attribute of root '/': 'init_lib_search_path' = /home/install/FOUNDRY/digital/90nm/dig/lib
+1 /home/install/FOUNDRY/digital/90nm/dig/lib
+@genus:root: 3> set_db library typical.lib
+
+Threads Configured:3
+
+  Message Summary for Library typical.lib:
+  ****************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  ****************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.000000, 25.000000) in library 'typical.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+  Setting attribute of root '/': 'library' = typical.lib
+1 typical.lib
+@genus:root: 4> set_db librarytypical.lib
+Error   : A required argument was not specified. [TUI-202] [set_db]
+        : An argument of type '<string>' was not specified.
+        : Rerun the command specifying all required arguments.
+  set_db: set attributes on objects 
+
+Usage: set_db [-quiet] [-verbose] [-dbu] [-index <string>] <string> <string> [<string>]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-verbose]:
+        enables verbose 
+    [-dbu]:
+        indicates that attribute (coord, pt, rect, polygon, area, etc.) will be in database units 
+    [-index <string>]:
+        list of indices in a form of pairs of index_name value or a object name 
+    <string>:
+        <start> can be any object list (or collection) or <shorthand> (e.g., nets, insts, etc) 
+    <string>:
+        the <chain> is in the form [.<attribute_name1>[.<attribute_name2>]...] 
+    [<string>]:
+        the attribute value 
+1

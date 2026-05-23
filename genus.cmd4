@@ -1,0 +1,21 @@
+# Cadence Genus(TM) Synthesis Solution, Version 21.14-s082_1, built Jun 23 2022 14:32:08
+
+# Date: Sat Mar 28 15:50:30 2026
+# Host: cad13 (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (16cores*24cpus*1physical cpu*13th Gen Intel(R) Core(TM) i7-13700 30720KB)
+# OS:   Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+set_db init_lib_search_path /home/install/FOUNDRY/digital/90nm/dig/lib
+set_db library typical.lib
+read_hdl trafficlight.v
+elaborate
+read_sdc trafficlight_input.sdc
+syn_generic
+syn_map
+syn_opt
+write_hdl > trafficlight_netlist.v
+write_sdc > trafficlight_output_sdc.sdc
+report_timing > trafficlight_timing.rpt
+repot_power > trafficlight_power.rpt
+report_power > trafficlight_power.rpt
+report_area > trafficlight_area.rpt
+report_gates > trafficlight_gates.rpt

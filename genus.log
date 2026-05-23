@@ -1,0 +1,116 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[14:49:46.095713] Configured Lic search path (21.01-s002): 5280@cadence
+
+Version: 21.14-s082_1, built Thu Jun 23 02:02:08 PDT 2022
+Options: 
+Date:    Sat Mar 28 14:49:46 2026
+Host:    cad13 (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (16cores*24cpus*1physical cpu*13th Gen Intel(R) Core(TM) i7-13700 30720KB) (15886420KB)
+PID:     53310
+OS:      Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+
+[14:49:46.053546] Periodic Lic check successful
+[14:49:46.053546] Feature usage summary:
+[14:49:46.053546] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (4 seconds elapsed).
+
+WARNING: This version of the tool is 1374 days old.
+@genus:root: 1> set_db init_lib_search_path /home/install/FOUNDRY/digital/90nm/dig/lib
+  Setting attribute of root '/': 'init_lib_search_path' = /home/install/FOUNDRY/digital/90nm/dig/lib
+1 /home/install/FOUNDRY/digital/90nm/dig/lib
+@genus:root: 2> set_db typical.lib
+Error   : A required argument was not specified. [TUI-202] [set_db]
+        : An argument of type '<string>' was not specified.
+        : Rerun the command specifying all required arguments.
+  set_db: set attributes on objects 
+
+Usage: set_db [-quiet] [-verbose] [-dbu] [-index <string>] <string> <string>
+           [<string>]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-verbose]:
+        enables verbose 
+    [-dbu]:
+        indicates that attribute (coord, pt, rect, polygon, area, etc.) will be 
+        in database units 
+    [-index <string>]:
+        list of indices in a form of pairs of index_name value or a object name 
+    <string>:
+        <start> can be any object list (or collection) or <shorthand> (e.g., 
+        nets, insts, etc) 
+    <string>:
+        the <chain> is in the form [.<attribute_name1>[.<attribute_name2>]...] 
+    [<string>]:
+        the attribute value 
+1
+@genus:root: 3> set_db library typical.lib
+
+Threads Configured:3
+
+  Message Summary for Library typical.lib:
+  ****************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  ****************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.000000, 25.000000) in library 'typical.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+  Setting attribute of root '/': 'library' = typical.lib
+1 typical.lib
+@genus:root: 4> set_db library typical.lib
+Freeing libraries in memory (typical.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.000000, 25.000000) in library 'typical.lib'.
+  Setting attribute of root '/': 'library' = typical.lib
+1 typical.lib
+@genus:root: 5> set_db init_lib_search_path /home/install/FOUNDRY/digital/90nm/dig/lib
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '/home/install/FOUNDRY/digital/90nm/dig/lib'
+        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
+  Setting attribute of root '/': 'init_lib_search_path' = /home/install/FOUNDRY/digital/90nm/dig/lib
+1 /home/install/FOUNDRY/digital/90nm/dig/lib
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 636s, ST: 10s, FG: 10s, CPU: 3.1%}, MEM {curr: 1.3G, peak: 1.3G, phys curr: 0.5G, phys peak: 0.5G}, SYS {load: 0.2, cpu: 24, total: 15.2G, free: 6.6G}
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 643s, ST: 10s, FG: 10s, CPU: 3.6%}, MEM {curr: 1.3G, peak: 1.3G, phys curr: 0.5G, phys peak: 0.5G}, SYS {load: 0.2, cpu: 24, total: 15.2G, free: 6.6G}
+@genus:root: 6> set_db library typical.lib
+Freeing libraries in memory (typical.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.000000, 25.000000) in library 'typical.lib'.
+  Setting attribute of root '/': 'library' = typical.lib
+1 typical.lib
+@genus:root: 7> set_db init_lib_search_path /home/install/FOUNDRY/digital/90nm/dig/lib
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '/home/install/FOUNDRY/digital/90nm/dig/lib'
+  Setting attribute of root '/': 'init_lib_search_path' = /home/install/FOUNDRY/digital/90nm/dig/lib
+1 /home/install/FOUNDRY/digital/90nm/dig/lib
+@genus:root: 8> set_db library typical.lib
+Freeing libraries in memory (typical.lib)
+
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.000000, 25.000000) in library 'typical.lib'.
+  Setting attribute of root '/': 'library' = typical.lib
+1 typical.lib
+@genus:root: 9> read_hdl
+Error   : A required argument was not specified. [TUI-202] [read_hdl]
+        : One of the two options : design files or '-f' should be specified.
+1
